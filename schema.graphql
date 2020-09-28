@@ -1,0 +1,29 @@
+type User {
+  email: String!
+  firstName: String!
+  lastName: String!
+  organizations: [Organization!] @relation
+}
+
+type Organization {
+  name: String!
+  users: [User!] @relation
+}
+
+type Question {
+  title: String!
+  description: String!
+  votes: [Vote!] @relation
+}
+
+type Vote {
+  user: User!
+  question: Question!
+  answer: Answer!
+}
+
+enum Answer {
+  Yes
+  No
+  Absent
+}

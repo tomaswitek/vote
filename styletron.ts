@@ -8,7 +8,7 @@ export const styletron =
   typeof window === 'undefined'
     ? new Server()
     : new Client({
-        hydrate: getHydrateClass(),
+        hydrate: getHydrateClass() as any,
       })
 
 export const debug =

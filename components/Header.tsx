@@ -1,4 +1,3 @@
-import App from 'next/app'
 import {
   HeaderNavigation,
   ALIGN,
@@ -7,6 +6,7 @@ import {
 } from 'baseui/header-navigation'
 import { Button } from 'baseui/button'
 import { StyledLink } from 'baseui/link'
+import Link from 'next/link'
 
 function Header() {
   return (
@@ -17,15 +17,9 @@ function Header() {
       <StyledNavigationList $align={ALIGN.center} />
       <StyledNavigationList $align={ALIGN.right}>
         <StyledNavigationItem>
-          <StyledLink href="#basic-link1">Tab Link One</StyledLink>
-        </StyledNavigationItem>
-        <StyledNavigationItem>
-          <StyledLink href="#basic-link2">Tab Link Two</StyledLink>
-        </StyledNavigationItem>
-      </StyledNavigationList>
-      <StyledNavigationList $align={ALIGN.right}>
-        <StyledNavigationItem>
-          <Button>Get started</Button>
+          <Link href="/users/new">
+            <StyledLink href="#">New user</StyledLink>
+          </Link>
         </StyledNavigationItem>
       </StyledNavigationList>
     </HeaderNavigation>

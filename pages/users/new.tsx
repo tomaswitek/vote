@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, KIND } from 'baseui/button'
+import NewUserForm from '../../components/Users/NewUserForm'
 
 interface Props {}
 
@@ -11,11 +11,7 @@ const THEME = {
 function NewUserPage(props: Props) {
   const {} = props
 
-  return (
-    <Button kind={KIND.secondary} onClick={() => undefined}>
-      Toggle light/dark theme!
-    </Button>
-  )
+  return <NewUserForm />
 }
 
 export default NewUserPage
